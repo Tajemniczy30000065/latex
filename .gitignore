@@ -12,6 +12,8 @@
 *.snm
 *.bbl
 *.blg
+*.bcf
+*.xml
 
 # --- Pliki wynikowe PDF ---
 *.pdf
