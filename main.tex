@@ -1,0 +1,155 @@
+\documentclass[12pt,a4paper]{report}
+
+% --- Pakiety ---
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage{biblatex}
+
+\geometry{margin=2.5cm}
+\addbibresource{bibliografia.bib}
+
+% --- Wczytanie danych autora (POZA repo) ---
+\input{autor.tex}
+
+% --- Nagłówki ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{Autor: \Autor}
+\fancyfoot[C]{\thepage}
+
+% --- Dane dokumentu ---
+\title{Długie dokumenty\\
+\large Analiza formy, struktury i procesu}
+\author{\Autor}
+\date{Styczeń 2026}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\Huge\bfseries Długie dokumenty\par}
+    \vspace{1cm}
+    {\Large Analiza formy, struktury i procesu\par}
+    \vspace{2cm}
+    {\Large Autor: \Autor\par}
+    \vfill
+    {\large Data powstania dokumentu: \today\par}
+\end{titlepage}
+
+% --- Streszczenie ---
+\chapter*{Streszczenie}
+\addcontentsline{toc}{chapter}{Streszczenie}
+
+Dokument analizuje proces tworzenia i wypełniania długich dokumentów
+oraz znaczenie struktury, cierpliwości i konsekwencji w pracy z tekstem.
+Przedstawiono przykłady tabel, ilustracji oraz list, które porządkują treść
+i ułatwiają odbiór informacji. Wszystkie źródła w bibliografii pochodzą
+z publicznie dostępnych materiałów online.
+
+\tableofcontents
+\newpage
+
+% --- Rozdział 1 ---
+\chapter{Wprowadzenie do długich dokumentów}
+
+Tworzenie i wypełnianie długich dokumentów wymaga planowania
+i systematyczności \cite{dokumenty}. Ich odbiór i analiza przez czytelnika
+może być utrudniona bez konsekwentnej struktury.
+
+\section{Podział dokumentów}
+
+Długie dokumenty można podzielić na:
+\begin{itemize}
+    \item dokumenty naukowe i raporty,
+    \item eseje i prace akademickie,
+    \item powieści i narracje rozbudowane.
+\end{itemize}
+
+\section{Znaczenie struktury}
+
+Nagłówki, akapity, tabele i ilustracje pełnią funkcję punktów orientacyjnych
+dla czytelnika. Ułatwiają zrozumienie treści i organizację informacji.
+
+% --- Ilustracja ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{rysunek1.jpg}
+    \caption{Przykładowa ilustracja w dokumencie}
+    \label{fig:ilustracja}
+\end{figure}
+
+% --- Rozdział 2 ---
+\chapter{Proces wypełniania dokumentów}
+
+Wypełnianie dokumentów wymaga cierpliwości i dokładności \cite{dokumenty}.
+
+\section{Etapy pracy}
+
+\begin{enumerate}
+    \item Analiza wymagań dokumentu,
+    \item Zebranie danych i materiałów,
+    \item Stopniowe uzupełnianie treści,
+    \item Kontrola i korekta.
+\end{enumerate}
+
+\section{Tabele i listy}
+
+Tabele i listy ułatwiają porządkowanie danych i porównywanie informacji.
+
+\begin{table}[H]
+\centering
+\caption{Przykładowa tabela w dokumencie}
+\begin{tabular}{lll}
+\toprule
+Sekcja & Typ danych & Dokładność \\
+\midrule
+A & Tekst & Wysoka \\
+B & Liczby & Bardzo wysoka \\
+C & Daty & Jednolity format \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Punkt listy nienumerowanej 1
+    \item Punkt listy nienumerowanej 2
+\end{itemize}
+
+% --- Rozdział 3 ---
+\chapter{Dokument jako forma refleksyjna}
+
+Dokument może komentować własną strukturę i proces tworzenia.
+Staje się wtedy nie tylko narzędziem, ale również zapisem metodologicznym
+\cite{esej,dokumenty}.
+
+% --- Wnioski ---
+\chapter{Wnioski}
+
+Do realizacji zadania wybrano klasę \texttt{report}, ponieważ:
+\begin{itemize}
+    \item umożliwia logiczny podział na rozdziały,
+    \item jest odpowiednia dla dokumentów akademickich i analitycznych,
+    \item pozwala na automatyczne tworzenie spisu treści i bibliografii.
+\end{itemize}
+
+Źródła dokumentu dostępne są w publicznym repozytorium Git:
+\begin{center}
+\url{https://github.com/Tajemniczy30000065/latex}
+\end{center}
+
+
+\printbibliography
+
+\end{document}
